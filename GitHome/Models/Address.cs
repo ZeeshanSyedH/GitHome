@@ -12,9 +12,20 @@ namespace GitHome.Models
     {
         [Key]
         public int addressID { get; set; }
+
+        [Required]
         public int civicNumber { get; set; }
+
+        [Required]
+        [StringLength(40)]
         public string street { get; set; }
+
+        [Required]
+        [StringLength(40)]
         public string city { get; set; }
+
+        [Required]
+        [StringLength(6)]
         public string zipCode { get; set; }
     }
 }

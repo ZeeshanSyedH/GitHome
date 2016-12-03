@@ -1,4 +1,6 @@
-﻿namespace GitHome.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace GitHome.Models
 {
 
     /*
@@ -10,10 +12,21 @@
 
     public class Client
     {
+        [Key]
         public int clientID { get; set; }
+
+        [Required]
+        [StringLength(30)]
         public string clientFirstName { get; set; }
+
+        [Required]
+        [StringLength(30)]
         public string clientLastName { get; set; }
+
+        [StringLength(80)]
         public string clientEmail { get; set; }
+
+        [Required]
         public int clientPhoneNumber { get; set; }
     }
 }

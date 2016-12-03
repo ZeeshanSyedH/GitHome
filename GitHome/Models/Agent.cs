@@ -16,17 +16,29 @@ namespace GitHome.Models
         [Key]
         public int AgentID { get; set; }
 
+        [Required]
         public DateTime joinedOn { get; set; }
 
+        [Required]
         public bool isActive { get; set; }
+
+        [Required]
         public int housesSold { get; set; }
 
+        [Required]
+        [StringLength(30)]
         public string agentFirstName { get; set; }
+
+        [Required]
+        [StringLength(30)]
         public string agentLastName { get; set; }
 
         //public Image agentPicture { get; set; }
+
+        [Required]
         public Address agentAddress { get; set; }
 
+        [Required]
         public SecurityQuestion securityQuestions { get; set; }
 
     }
