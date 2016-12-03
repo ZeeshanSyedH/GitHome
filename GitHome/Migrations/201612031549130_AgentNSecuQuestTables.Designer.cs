@@ -7,13 +7,13 @@ namespace GitHome.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class CreateUnitTable : IMigrationMetadata
+    public sealed partial class AgentNSecuQuestTables : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CreateUnitTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AgentNSecuQuestTables));
         
         string IMigrationMetadata.Id
         {
-            get { return "201612030435448_CreateUnitTable"; }
+            get { return "201612031549130_AgentNSecuQuestTables"; }
         }
         
         string IMigrationMetadata.Source

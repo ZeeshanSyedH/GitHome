@@ -205,16 +205,29 @@
     <Compile Include="Migrations\201611292332077_initialMigration.Designer.cs">
       <DependentUpon>201611292332077_initialMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201612030435448_CreateUnitTable.cs" />
-    <Compile Include="Migrations\201612030435448_CreateUnitTable.Designer.cs">
-      <DependentUpon>201612030435448_CreateUnitTable.cs</DependentUpon>
+    <Compile Include="Migrations\201612031522105_initialTables.cs" />
+    <Compile Include="Migrations\201612031522105_initialTables.Designer.cs">
+      <DependentUpon>201612031522105_initialTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612031535104_addedClientTable.cs" />
+    <Compile Include="Migrations\201612031535104_addedClientTable.Designer.cs">
+      <DependentUpon>201612031535104_addedClientTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612031549130_AgentNSecuQuestTables.cs" />
+    <Compile Include="Migrations\201612031549130_AgentNSecuQuestTables.Designer.cs">
+      <DependentUpon>201612031549130_AgentNSecuQuestTables.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Agent.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\Client.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\SecurityQuestion.cs" />
     <Compile Include="Models\Unit.cs" />
+    <Compile Include="Models\UnitDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -294,8 +307,14 @@
     <EmbeddedResource Include="Migrations\201611292332077_initialMigration.resx">
       <DependentUpon>201611292332077_initialMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201612030435448_CreateUnitTable.resx">
-      <DependentUpon>201612030435448_CreateUnitTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201612031522105_initialTables.resx">
+      <DependentUpon>201612031522105_initialTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612031535104_addedClientTable.resx">
+      <DependentUpon>201612031535104_addedClientTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612031549130_AgentNSecuQuestTables.resx">
+      <DependentUpon>201612031549130_AgentNSecuQuestTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
