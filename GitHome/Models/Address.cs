@@ -2,6 +2,12 @@
 
 namespace GitHome.Models
 {
+
+    /*
+    * THIS CLASS IS THE ADDRESS CLASS WHICH DEFINES THE COMPONENTS OF AN ADDRESS(CIVIC,STREET,CITY,ZIPCODE)
+    * EACH AGENT & CLIENT HAS AN ADDRESS
+    */
+
     public class Address
     {
         [Key]

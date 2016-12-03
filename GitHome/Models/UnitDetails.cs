@@ -7,7 +7,7 @@ namespace GitHome.Models
         [Key]
         public int unitDetailID { get; set; }
 
-        public Address unitAddress { get; set; }
+        public Address AddressID { get; set; }
 
         public int yearBuilt { get; set; }
 

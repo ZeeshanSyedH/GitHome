@@ -213,9 +213,9 @@
     <Compile Include="Migrations\201612031535104_addedClientTable.Designer.cs">
       <DependentUpon>201612031535104_addedClientTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201612031549130_AgentNSecuQuestTables.cs" />
-    <Compile Include="Migrations\201612031549130_AgentNSecuQuestTables.Designer.cs">
-      <DependentUpon>201612031549130_AgentNSecuQuestTables.cs</DependentUpon>
+    <Compile Include="Migrations\201612031605204_securityQuesNAgentsTable.cs" />
+    <Compile Include="Migrations\201612031605204_securityQuesNAgentsTable.Designer.cs">
+      <DependentUpon>201612031605204_securityQuesNAgentsTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -313,8 +313,8 @@
     <EmbeddedResource Include="Migrations\201612031535104_addedClientTable.resx">
       <DependentUpon>201612031535104_addedClientTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201612031549130_AgentNSecuQuestTables.resx">
-      <DependentUpon>201612031549130_AgentNSecuQuestTables.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201612031605204_securityQuesNAgentsTable.resx">
+      <DependentUpon>201612031605204_securityQuesNAgentsTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
