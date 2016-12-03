@@ -11,7 +11,7 @@ namespace GitHome.Models
     *      THEIR ADDRESS & SECURITY QUESTIONS TO RESET THEIR PASSWORD
     */
 
-    public class Agent
+    public class Agent : Person
     {
         [Key]
         public int AgentID { get; set; }
@@ -24,19 +24,6 @@ namespace GitHome.Models
 
         [Required]
         public int housesSold { get; set; }
-
-        [Required]
-        [StringLength(30)]
-        public string agentFirstName { get; set; }
-
-        [Required]
-        [StringLength(30)]
-        public string agentLastName { get; set; }
-
-        //public Image agentPicture { get; set; }
-
-        [Required]
-        public Address agentAddress { get; set; }
 
         [Required]
         public SecurityQuestion securityQuestions { get; set; }

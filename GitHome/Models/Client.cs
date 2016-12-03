@@ -10,23 +10,9 @@ namespace GitHome.Models
     */
 
 
-    public class Client
+    public sealed class Client : Person
     {
         [Key]
         public int clientID { get; set; }
-
-        [Required]
-        [StringLength(30)]
-        public string clientFirstName { get; set; }
-
-        [Required]
-        [StringLength(30)]
-        public string clientLastName { get; set; }
-
-        [StringLength(80)]
-        public string clientEmail { get; set; }
-
-        [Required]
-        public int clientPhoneNumber { get; set; }
     }
 }

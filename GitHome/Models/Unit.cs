@@ -12,7 +12,7 @@ namespace GitHome.Models
      */
 
 
-    public class Unit
+    public sealed class Unit
     {
         [Key]
         public int unitID { get; set; }

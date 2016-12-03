@@ -221,6 +221,14 @@
     <Compile Include="Migrations\201612031640166_DataAnnotations.Designer.cs">
       <DependentUpon>201612031640166_DataAnnotations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612031706221_populateAgents.cs" />
+    <Compile Include="Migrations\201612031706221_populateAgents.Designer.cs">
+      <DependentUpon>201612031706221_populateAgents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612031723370_inheritenceImplemented.cs" />
+    <Compile Include="Migrations\201612031723370_inheritenceImplemented.Designer.cs">
+      <DependentUpon>201612031723370_inheritenceImplemented.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
@@ -229,6 +237,7 @@
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Models\SecurityQuestion.cs" />
     <Compile Include="Models\Unit.cs" />
     <Compile Include="Models\UnitDetails.cs" />
@@ -322,6 +331,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612031640166_DataAnnotations.resx">
       <DependentUpon>201612031640166_DataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612031706221_populateAgents.resx">
+      <DependentUpon>201612031706221_populateAgents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612031723370_inheritenceImplemented.resx">
+      <DependentUpon>201612031723370_inheritenceImplemented.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
