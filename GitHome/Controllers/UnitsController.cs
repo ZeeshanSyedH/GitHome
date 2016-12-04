@@ -28,6 +28,7 @@ namespace GitHome.Controllers
 
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(UnitFormViewModel viewModel)
         {
             if (!ModelState.IsValid)
