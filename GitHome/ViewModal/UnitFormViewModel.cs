@@ -11,6 +11,7 @@ namespace GitHome.ViewModal
         public string Price { get; set; }
 
         public string Date { get; set; }
+        public string Time { get; set; }
 
         public string Civic { get; set; }
         public string Street { get; set; }
