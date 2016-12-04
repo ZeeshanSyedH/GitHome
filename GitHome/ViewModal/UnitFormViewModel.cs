@@ -1,4 +1,5 @@
 ﻿using GitHome.Models;
+using System;
 using System.Collections.Generic;
 
 namespace GitHome.ViewModal
@@ -25,6 +26,13 @@ namespace GitHome.ViewModal
         public bool CentralAirCondition { get; set; }
 
         public string Description { get; set; }
+        public DateTime DateTime
+        {
+            get
+            {
+                return DateTime.Parse(string.Format("{0} {1}", Date, Time));
+            }
+        }
 
 
         // public List<Image> -->

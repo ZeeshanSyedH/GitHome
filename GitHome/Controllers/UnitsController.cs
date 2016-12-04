@@ -30,18 +30,10 @@ namespace GitHome.Controllers
         [HttpPost]
         public ActionResult Create(UnitFormViewModel viewModel)
         {
-            // CURRENT USER
-            var UserId = User.Identity.GetUserId();
-
-            // GET CURRENT USERID OF LOGGED IN USER
-            var Agent = _context.Users.Single(u => u.Id == UserId);
-
-            // CREATE ADDRESS FROM VIEW
-
             var Unit = new Unit
             {
-                AgentID = Agent,
-                AvailableFrom = DateTime.Parse(string.Format("{0} {1}", viewModel.Date, viewModel.Time)),
+                AgentID = User.Identity.GetUserId(),
+                AvailableFrom = viewModel.DateTime,
                 clientID = Convert.ToInt32(viewModel.Client),
 
                 UnitDetailID = new UnitDetails

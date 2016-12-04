@@ -18,7 +18,7 @@ namespace GitHome.Models
         public int unitID { get; set; }
 
         [Required]
-        public ApplicationUser AgentID { get; set; }
+        public String AgentID { get; set; }
 
         [Required]
         public int clientID { get; set; }
@@ -28,7 +28,6 @@ namespace GitHome.Models
 
         [Required]
         public DateTime AvailableFrom { get; set; }
-
     }
 
 
