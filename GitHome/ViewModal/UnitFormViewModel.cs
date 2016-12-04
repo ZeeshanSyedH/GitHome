@@ -19,8 +19,9 @@ namespace GitHome.ViewModal
         public string YearBuilt { get; set; }
         public string Rooms { get; set; }
         public string Bedrooms { get; set; }
+        public string Bathrooms { get; set; }
         public string Garages { get; set; }
-        public string CentralAirCondition { get; set; }
+        public bool CentralAirCondition { get; set; }
 
         public string Description { get; set; }
 
