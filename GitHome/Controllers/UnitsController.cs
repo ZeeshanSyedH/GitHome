@@ -30,10 +30,16 @@ namespace GitHome.Controllers
         [HttpPost]
         public ActionResult Create(UnitFormViewModel viewModel)
         {
+            if (!ModelState.IsValid)
+            {
+                viewModel.Clients = _context.Clients.ToList();
+                return View("Create", viewModel);
+            }
+
             var Unit = new Unit
             {
                 AgentID = User.Identity.GetUserId(),
-                AvailableFrom = viewModel.DateTime,
+                AvailableFrom = viewModel.GetDateTime(),
                 clientID = Convert.ToInt32(viewModel.Client),
 
                 UnitDetailID = new UnitDetails

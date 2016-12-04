@@ -5,93 +5,105 @@
 
 <h2>Add House</h2>
 
-using @Html.BeginForm("Create", "Units"){
+@using (Html.BeginForm("Create", "Units"))
+{
 
-<!-- CLIENT WHO'S HOUSE WILL BE SOLD -->
-<div>
-    @Html.LabelFor(m => m.Client)
-    @Html.DropDownListFor(m => m.Client, new SelectList(Model.Clients, "clientID", "FirstName"), "", new { @class = "form-control" })
-</div>
+    <!-- CLIENT WHO'S HOUSE WILL BE SOLD -->
+    <div>
+        @Html.LabelFor(m => m.Client)
+        @Html.DropDownListFor(m => m.Client, new SelectList(Model.Clients, "clientID", "FirstName"), "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Client)
+    </div>
 
-<!-- COST OF THE HOUSE -->
-<div>
-    @Html.LabelFor(m => m.Price)
-    @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })
-</div>
+    <!-- COST OF THE HOUSE -->
+    <div>
+        @Html.LabelFor(m => m.Price)
+        @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Price)
+    </div>
 
-<!-- DATE AT WHICH IT WILL BE UNOCCUPIED -->
-<div>
-    @Html.LabelFor(m => m.Date)
-    @Html.TextBoxFor(m => m.Date, new { @class = "form-control" })
-</div>
+    <!-- DATE AT WHICH IT WILL BE UNOCCUPIED -->
+    <div>
+        @Html.LabelFor(m => m.Date)
+        @Html.TextBoxFor(m => m.Date, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Date)
+    </div>
 
-<!-- TIME AT WHICH IT WILL BE UNOCCUPIED -->
-<div>
-    @Html.LabelFor(m => m.Time)
-    @Html.TextBoxFor(m => m.Time, new { @class = "form-control" })
-</div>
+    <!-- YEAR BUILT -->
+    <div>
+        @Html.LabelFor(m => m.YearBuilt)
+        @Html.TextBoxFor(m => m.YearBuilt, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.YearBuilt)
+    </div>
 
-<!-- YEAR BUILT -->
-<div>
-    @Html.LabelFor(m => m.YearBuilt)
-    @Html.TextBoxFor(m => m.YearBuilt, new { @class = "form-control" })
-</div>
+    <!-- ADDRESS CIVIC # -->
+    <div>
+        @Html.LabelFor(m => m.Civic)
+        @Html.TextBoxFor(m => m.Civic, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Civic)
+    </div>
 
-<!-- ADDRESS CIVIC # -->
-<div>
-    @Html.LabelFor(m => m.Civic)
-    @Html.TextBoxFor(m => m.Civic, new { @class = "form-control" })
-</div>
+    <!-- ADDRESS STREET  -->
+    <div>
+        @Html.LabelFor(m => m.Street)
+        @Html.TextBoxFor(m => m.Street, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Street)
+    </div>
 
-<!-- ADDRESS STREET  -->
-<div>
-    @Html.LabelFor(m => m.Street)
-    @Html.TextBoxFor(m => m.Street, new { @class = "form-control" })
-</div>
+    <!-- ADDRESS CITY -->
+    <div>
+        @Html.LabelFor(m => m.City)
+        @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.City)
+    </div>
 
-<!-- ADDRESS CITY -->
-<div>
-    @Html.LabelFor(m => m.City)
-    @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
-</div>
+    <!-- ADDRESS ZIP CODE -->
+    <div>
+        @Html.LabelFor(m => m.ZipCode)
+        @Html.TextBoxFor(m => m.ZipCode, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.ZipCode)
+    </div>
 
-<!-- ADDRESS ZIP CODE -->
-<div>
-    @Html.LabelFor(m => m.ZipCode)
-    @Html.TextBoxFor(m => m.ZipCode, new { @class = "form-control" })
-</div>
+    <!-- TOTAL ROOMS -->
+    <div>
+        @Html.LabelFor(m => m.Rooms)
+        @Html.TextBoxFor(m => m.Rooms, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Rooms)
+    </div>
 
-<!-- TOTAL ROOMS -->
-<div>
-    @Html.LabelFor(m => m.Rooms)
-    @Html.TextBoxFor(m => m.Rooms, new { @class = "form-control" })
-</div>
+    <!-- BEDROOMS -->
+    <div>
+        @Html.LabelFor(m => m.Bedrooms)
+        @Html.TextBoxFor(m => m.Bedrooms, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Bedrooms)
+    </div>
 
-<!-- BEDROOMS -->
-<div>
-    @Html.LabelFor(m => m.Bedrooms)
-    @Html.TextBoxFor(m => m.Bedrooms, new { @class = "form-control" })
-</div>
+    <!-- BATHROOMS -->
+    <div>
+        @Html.LabelFor(m => m.Bathrooms)
+        @Html.TextBoxFor(m => m.Bathrooms, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Bathrooms)
+    </div>
 
-<!-- BATHROOMS -->
-<div>
-    @Html.LabelFor(m => m.Bathrooms)
-    @Html.TextBoxFor(m => m.Bathrooms, new { @class = "form-control" })
-</div>
+    <!-- GARAGES -->
+    <div>
+        @Html.LabelFor(m => m.Garages)
+        @Html.TextBoxFor(m => m.Garages, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Garages)
+    </div>
 
-<!-- GARAGES -->
-<div>
-    @Html.LabelFor(m => m.Garages)
-    @Html.TextBoxFor(m => m.Garages, new { @class = "form-control" })
-</div>
+    <!-- CENTRAL AIR CONDITIONING -->
+    <div>
+        @Html.LabelFor(m => m.CentralAirCondition)
+        @Html.CheckBoxFor(m => m.CentralAirCondition, new { @class = "form-control" })
+    </div>
 
-<!-- CENTRAL AIR CONDITIONING -->
-<div>
-    @Html.LabelFor(m => m.CentralAirCondition)
-    @Html.CheckBoxFor(m => m.CentralAirCondition, new { @class = "form-control" })
-</div>
-
-<!-- Button -->
-<button type="submit" value="Save" class="form-control btn btn-group-lg btn-primary">Save</button>
+    <!-- Button -->
+    <button type="submit" value="Save" class="form-control btn btn-group-lg btn-primary">Save</button>
 
 }
+
+@section scripts 
+    {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
