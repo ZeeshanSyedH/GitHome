@@ -113,3 +113,29 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .navbar-inverse .navbar-brand:hover {
     color: blue;
 }
+
+.Inline {
+    display: inline-block;
+    margin-right: 7px;
+}
+
+.SmallTB {
+    width: 15vw;
+}
+
+.CBSmall {
+    max-height: 17px;
+    border-style: none;
+    border-color: none;
+    float: left;
+    width: 4vw;
+}
+
+.InputHeightSmaller {
+    max-height: 25px;
+}
+
+span.field-validation-error {
+    color: red;
+    font-weight:bold;
+}

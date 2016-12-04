@@ -12,6 +12,7 @@ namespace GitHome.ViewModal
         [Required]
         public string Client { get; set; }
 
+        // UNIT INFORMATION
         [Required]
         public string Price { get; set; }
 
@@ -22,6 +23,7 @@ namespace GitHome.ViewModal
         [Required]
         public string Time = "12:00";
 
+        // ADDRESS INFORMATION
         [Required]
         public string Civic { get; set; }
 
@@ -37,6 +39,7 @@ namespace GitHome.ViewModal
         [Required]
         public string YearBuilt { get; set; }
 
+        // PROPERTY DETAILS
         [Required]
         public string Rooms { get; set; }
 
@@ -52,6 +55,7 @@ namespace GitHome.ViewModal
         public bool CentralAirCondition { get; set; }
 
         public string Description { get; set; }
+
         public DateTime GetDateTime()
         {
             return DateTime.Parse(string.Format("{0} {1}", Date, Time));

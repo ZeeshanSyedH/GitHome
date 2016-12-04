@@ -13,8 +13,6 @@ namespace GitHome.Models
 
         public DbSet<Agent> Agents { get; set; }
 
-        public DbSet<SecurityQuestion> securityQuestions { get; set; }
-
         // CHECK IF ITS NECESSARY TO PUT THIS HERE
         public DbSet<Address> UnitAddresses { get; set; }
 

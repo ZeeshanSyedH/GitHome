@@ -18,7 +18,7 @@ namespace GitHome.Controllers
         [Authorize]
         public ActionResult Create()
         {
-            var viewModel = new UnitFormViewModel
+            var viewModel = new UnitFormViewModel()
             {
                 Clients = _context.Clients.ToList()
             };

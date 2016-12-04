@@ -14,5 +14,8 @@ namespace GitHome.Models
     {
         [Key]
         public int clientID { get; set; }
+
+        [Required]
+        public int AgentID { get; set; }
     }
 }

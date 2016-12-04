@@ -80,6 +80,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -244,6 +246,10 @@
     <Compile Include="Migrations\201612040321221_updateDB.Designer.cs">
       <DependentUpon>201612040321221_updateDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612041759058_updateDB1.cs" />
+    <Compile Include="Migrations\201612041759058_updateDB1.Designer.cs">
+      <DependentUpon>201612041759058_updateDB1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
@@ -253,11 +259,11 @@
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Person.cs" />
-    <Compile Include="Models\SecurityQuestion.cs" />
     <Compile Include="Models\Unit.cs" />
     <Compile Include="Models\UnitDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModal\ClientFormViewModel.cs" />
     <Compile Include="ViewModal\FutureDate.cs" />
     <Compile Include="ViewModal\UnitFormViewModel.cs" />
   </ItemGroup>
@@ -368,6 +374,12 @@
     <EmbeddedResource Include="Migrations\201612040321221_updateDB.resx">
       <DependentUpon>201612040321221_updateDB.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612041759058_updateDB1.resx">
+      <DependentUpon>201612041759058_updateDB1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

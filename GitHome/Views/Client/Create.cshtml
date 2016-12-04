@@ -1,4 +1,4 @@
-﻿@model GitHome.Models.Client
+﻿@model GitHome.ViewModal.ClientFormViewModel
 
 @{
     ViewBag.Title = "Create";
@@ -8,28 +8,32 @@
 
 @using (Html.BeginForm("Create", "Client"))
 {
-    <!--FirstName-->
+        <!-- CLIENT FirstName-->
     <div>
         @Html.LabelFor(m => m.FirstName)
-        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", Placeholder = " First Name ( Client )" })
+        @Html.ValidationMessageFor(m => m.FirstName)
     </div>
 
-    <!--LastName-->
+    <!-- CLIENT LastName-->
     <div>
         @Html.LabelFor(m => m.LastName)
-        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", placeholder = " Last Name ( Client ) " })
+        @Html.ValidationMessageFor(m => m.LastName)
     </div>
 
-    <!--Email Address-->
+    <!--CLIENT Email Address-->
     <div>
         @Html.LabelFor(m => m.Email)
-        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", Placeholder = "Email Address ( Client )" })
+        @Html.ValidationMessageFor(m => m.Email)
     </div>
 
-    <!--PhoneNumber-->
+    <!--CLIENT PhoneNumber-->
     <div>
         @Html.LabelFor(m => m.PhoneNumber)
-        @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control", Placeholder = "Phone # ( Client )" })
+        @Html.ValidationMessageFor(m => m.PhoneNumber)
     </div>
 
     <button type="submit" value="Save" class="btn btn-primary btn-lg form-control">Save</button>
