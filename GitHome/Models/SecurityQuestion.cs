@@ -16,14 +16,19 @@ namespace GitHome.Models
         public int securityID { get; set; }
 
         [Required]
-        public int AgentID { get; set; }
-
-        [Required]
         [StringLength(120)]
         public string Question { get; set; }
 
         [Required]
         [StringLength(120)]
         public string Answer { get; set; }
+
+
+        public SecurityQuestion(int id, string question, string answer)
+        {
+            this.securityID = id;
+            this.Question = question;
+            this.Answer = answer;
+        }
     }
 }

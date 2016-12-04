@@ -80,6 +80,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -196,8 +197,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\UnitsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -221,13 +224,17 @@
     <Compile Include="Migrations\201612031640166_DataAnnotations.Designer.cs">
       <DependentUpon>201612031640166_DataAnnotations.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201612031706221_populateAgents.cs" />
-    <Compile Include="Migrations\201612031706221_populateAgents.Designer.cs">
-      <DependentUpon>201612031706221_populateAgents.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201612031723370_inheritenceImplemented.cs" />
     <Compile Include="Migrations\201612031723370_inheritenceImplemented.Designer.cs">
       <DependentUpon>201612031723370_inheritenceImplemented.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612031727107_populateAgents.cs" />
+    <Compile Include="Migrations\201612031727107_populateAgents.Designer.cs">
+      <DependentUpon>201612031727107_populateAgents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612032103103_tableUpdate.cs" />
+    <Compile Include="Migrations\201612032103103_tableUpdate.Designer.cs">
+      <DependentUpon>201612032103103_tableUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -243,6 +250,7 @@
     <Compile Include="Models\UnitDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModal\UnitFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -304,9 +312,12 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Units\Create.cshtml" />
+    <Content Include="Views\Client\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -332,11 +343,14 @@
     <EmbeddedResource Include="Migrations\201612031640166_DataAnnotations.resx">
       <DependentUpon>201612031640166_DataAnnotations.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201612031706221_populateAgents.resx">
-      <DependentUpon>201612031706221_populateAgents.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612031723370_inheritenceImplemented.resx">
       <DependentUpon>201612031723370_inheritenceImplemented.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612031727107_populateAgents.resx">
+      <DependentUpon>201612031727107_populateAgents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612032103103_tableUpdate.resx">
+      <DependentUpon>201612032103103_tableUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

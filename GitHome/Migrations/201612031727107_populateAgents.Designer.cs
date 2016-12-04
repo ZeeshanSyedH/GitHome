@@ -13,7 +13,7 @@ namespace GitHome.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201612031706221_populateAgents"; }
+            get { return "201612031727107_populateAgents"; }
         }
         
         string IMigrationMetadata.Source

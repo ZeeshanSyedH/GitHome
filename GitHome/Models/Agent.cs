@@ -17,6 +17,9 @@ namespace GitHome.Models
         public int AgentID { get; set; }
 
         [Required]
+        public int securityQuestionID { get; set; }
+
+        [Required]
         public DateTime joinedOn { get; set; }
 
         [Required]
@@ -25,8 +28,20 @@ namespace GitHome.Models
         [Required]
         public int housesSold { get; set; }
 
-        [Required]
-        public SecurityQuestion securityQuestions { get; set; }
 
+        public Agent(int agentId, int securityQId, DateTime joinedOn, bool isActive, int housesSold, string firstName, string lastName, string email, int phoneNumber)
+        {
+            // AGENT SPECIFIC ATTRIBUTES
+            this.AgentID = agentId;
+            this.securityQuestionID = securityQId;
+            this.joinedOn = joinedOn;
+            this.isActive = isActive;
+            this.housesSold = housesSold;
+            // PERSON ATTIBUTES
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Email = email;
+            this.PhoneNumber = phoneNumber;
+        }
     }
 }

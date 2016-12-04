@@ -27,7 +27,7 @@ namespace GitHome.Models
         public UnitDetails UnitDetailID { get; set; }
 
         [Required]
-        public DateTime DateTime { get; set; }
+        public DateTime AvailableFrom { get; set; }
 
     }
 

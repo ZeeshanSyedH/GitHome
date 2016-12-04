@@ -1,0 +1,15 @@
+﻿@model  GitHome.ViewModal.UnitFormViewModel
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Add House</h2>
+
+<form>
+    <div>
+        @Html.LabelFor(m => m.Client)  
+        @Html.DropDownListFor(m=>m.Client,new SelectList(Model.Clients,"Id","FirstName"+" "+"LastName"))
+    </div> 
+
+
+</form>
