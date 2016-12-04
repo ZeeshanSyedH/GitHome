@@ -9,92 +9,93 @@
 {
     @Html.AntiForgeryToken()
 
+
     <!-- CLIENT WHO'S HOUSE WILL BE SOLD -->
-    <div>
+    <div class="form-group">
         @Html.LabelFor(m => m.Client)
-        @Html.DropDownListFor(m => m.Client, new SelectList(Model.Clients, "clientID", "FirstName"), "", new { @class = "form-control" })
+        @Html.DropDownListFor(m => m.Client, new SelectList(Model.Clients, "clientID", "FirstName"), "", new { @class = "form-control ddl" })
         @Html.ValidationMessageFor(m => m.Client)
     </div>
 
     <!-- COST OF THE HOUSE -->
-    <div>
+    <div class="form-group">
         @Html.LabelFor(m => m.Price)
         @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Price)
     </div>
 
     <!-- DATE AT WHICH IT WILL BE UNOCCUPIED -->
-    <div>
+    <div class="form-group">
         @Html.LabelFor(m => m.Date)
         @Html.TextBoxFor(m => m.Date, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Date)
     </div>
 
     <!-- YEAR BUILT -->
-    <div>
+    <div class="form-group">
         @Html.LabelFor(m => m.YearBuilt)
         @Html.TextBoxFor(m => m.YearBuilt, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.YearBuilt)
     </div>
 
     <!-- ADDRESS CIVIC # -->
-    <div>
+    <div class="form-group">
         @Html.LabelFor(m => m.Civic)
         @Html.TextBoxFor(m => m.Civic, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Civic)
     </div>
 
     <!-- ADDRESS STREET  -->
-    <div>
+    <div class="form-group">
         @Html.LabelFor(m => m.Street)
         @Html.TextBoxFor(m => m.Street, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Street)
     </div>
 
     <!-- ADDRESS CITY -->
-    <div>
+    <div class="form-group">
         @Html.LabelFor(m => m.City)
         @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.City)
     </div>
 
     <!-- ADDRESS ZIP CODE -->
-    <div>
+    <div class="form-group">
         @Html.LabelFor(m => m.ZipCode)
         @Html.TextBoxFor(m => m.ZipCode, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.ZipCode)
     </div>
 
     <!-- TOTAL ROOMS -->
-    <div>
+    <div class="form-group">
         @Html.LabelFor(m => m.Rooms)
         @Html.TextBoxFor(m => m.Rooms, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Rooms)
     </div>
 
     <!-- BEDROOMS -->
-    <div>
+    <div class="form-group">
         @Html.LabelFor(m => m.Bedrooms)
         @Html.TextBoxFor(m => m.Bedrooms, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Bedrooms)
     </div>
 
     <!-- BATHROOMS -->
-    <div>
+    <div class="form-group">
         @Html.LabelFor(m => m.Bathrooms)
         @Html.TextBoxFor(m => m.Bathrooms, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Bathrooms)
     </div>
 
     <!-- GARAGES -->
-    <div>
+    <div "form-group">
         @Html.LabelFor(m => m.Garages)
         @Html.TextBoxFor(m => m.Garages, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Garages)
     </div>
 
     <!-- CENTRAL AIR CONDITIONING -->
-    <div>
+    <div class="form-group">
         @Html.LabelFor(m => m.CentralAirCondition)
         @Html.CheckBoxFor(m => m.CentralAirCondition, new { @class = "form-control" })
     </div>
