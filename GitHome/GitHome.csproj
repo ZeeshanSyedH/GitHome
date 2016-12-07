@@ -34,6 +34,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -207,13 +208,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="ViewModal\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Agent.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Client.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="ViewModal\ManageViewModels.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Unit.cs" />
     <Compile Include="Models\UnitProperties.cs" />
@@ -221,6 +222,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModal\ClientFormViewModel.cs" />
     <Compile Include="ViewModal\FutureDate.cs" />
+    <Compile Include="ViewModal\RegisterViewModal.cs" />
     <Compile Include="ViewModal\UnitFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
