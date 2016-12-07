@@ -6,8 +6,8 @@
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -134,8 +134,36 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .InputHeightSmaller {
     max-height: 25px;
 }
-
+ 
 span.field-validation-error {
     color: red;
-    font-weight:bold;
+    font-weight: bold;
+}
+
+.heroPhoto {
+}
+
+
+.myJumbotron {
+    min-height: 100vh;
+    align-content: center;
+    padding-top: 20vh;
+    background-image: url("http://www.hotel-r.net/im/hotel/it/dream-home-3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Lato";
+    color: blue;
+}
+
+.heroText {
+    padding-left: 20vw;
+}
+
+.rowDelayed {
+    margin-top: 101vh;
 }

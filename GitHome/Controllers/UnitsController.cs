@@ -1,7 +1,6 @@
 ﻿using GitHome.Models;
 using GitHome.ViewModal;
-using Microsoft.AspNet.Identity;
-using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -20,8 +19,14 @@ namespace GitHome.Controllers
         {
             var viewModel = new UnitFormViewModel()
             {
-                Clients = _context.Clients.ToList()
+                Clients = GetClientList()
             };
+            //viewModel.Clients = new List<SelectListItem>()
+            //{
+            //    new SelectListItem { Value = "1", Text = "Test 1" },
+            //    new SelectListItem { Value = "2", Text = "Test 2" },
+            //    new SelectListItem { Value = "3", Text = "Test 3" }
+            //};
 
             return View(viewModel);
         }
@@ -33,44 +38,56 @@ namespace GitHome.Controllers
         {
             if (!ModelState.IsValid)
             {
-                viewModel.Clients = _context.Clients.ToList();
+                viewModel.Clients = GetClientList();
+
                 return View("Create", viewModel);
             }
 
-            var Unit = new Unit
-            {
-                AgentID = User.Identity.GetUserId(),
-                AvailableFrom = viewModel.GetDateTime(),
-                clientID = Convert.ToInt32(viewModel.Client),
+            Address newAddress = new Address(viewModel.Civic,
+                                             viewModel.Street,
+                                             viewModel.City,
+                                             viewModel.ZipCode);
 
-                UnitDetailID = new UnitDetails
-                {
-                    // CREATE ADDRESS
-                    AddressID = new Address
-                    {
-                        civicNumber = Convert.ToInt32(viewModel.Civic),
-                        street = viewModel.Street,
-                        city = viewModel.City,
-                        zipCode = viewModel.ZipCode
-                    },
+            _context.Addresses.Add(newAddress);
+            _context.SaveChanges();
 
-                    // CREATE OTHER ATTIBUTES
-                    askingPrice = Convert.ToInt32(viewModel.Price),
-                    centralAirConditioning = viewModel.CentralAirCondition,
-                    yearBuilt = Convert.ToInt32(viewModel.YearBuilt),
-                    numRooms = Convert.ToInt32(viewModel.Rooms),
-                    numBathrooms = Convert.ToInt32(viewModel.Bathrooms),
-                    numBedrooms = Convert.ToInt32(viewModel.Bedrooms),
-                    numGarageDoors = Convert.ToInt32(viewModel.Garages),
-                    description = viewModel.Description
-                }
-            };
+            UnitProperties newUnitProperties = new UnitProperties(newAddress.addressID,
+                                                                  true,
+                                                                  viewModel.YearBuilt,
+                                                                  viewModel.Price,
+                                                                  viewModel.Title,
+                                                                  viewModel.Description,
+                                                                  viewModel.Rooms,
+                                                                  viewModel.Bedrooms,
+                                                                  viewModel.Bathrooms,
+                                                                  viewModel.Garages,
+                                                                  viewModel.CentralAirCondition);
 
-            _context.Units.Add(Unit);
+            _context.Properties.Add(newUnitProperties);
+            _context.SaveChanges();
+
+
+            Unit newProperty = new Unit(1,
+                newUnitProperties.unitDetailID,
+                viewModel.GetDateTime());
+
+            _context.Units.Add(newProperty);
             _context.SaveChanges();
 
             return RedirectToAction("Index", "Home");
 
+        }
+
+        private IEnumerable<SelectListItem> GetClientList()
+        {
+            return _context
+                    .Clients
+                    .Select(c => new SelectListItem
+                    {
+                        Text = c.clientID + " " + c.FirstName,
+                        Value = c.clientID.ToString()
+                    })
+                    .ToList();
         }
     }
 }

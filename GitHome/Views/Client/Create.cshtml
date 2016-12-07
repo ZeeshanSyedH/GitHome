@@ -9,30 +9,30 @@
 @using (Html.BeginForm("Create", "Client"))
 {
         <!-- CLIENT FirstName-->
-    <div>
-        @Html.LabelFor(m => m.FirstName)
-        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", Placeholder = " First Name ( Client )" })
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirstName, new { @class = "Inline" })
+        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control Inline InputHeightSmaller", placeholder = " First Name " })
         @Html.ValidationMessageFor(m => m.FirstName)
     </div>
 
     <!-- CLIENT LastName-->
-    <div>
-        @Html.LabelFor(m => m.LastName)
-        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", placeholder = " Last Name ( Client ) " })
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName, new { @class = "Inline" })
+        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control Inline InputHeightSmaller", placeholder = " Last Name " })
         @Html.ValidationMessageFor(m => m.LastName)
     </div>
 
-    <!--CLIENT Email Address-->
-    <div>
-        @Html.LabelFor(m => m.Email)
-        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", Placeholder = "Email Address ( Client )" })
+        <!--CLIENT Email Address-->
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email, new { @class = "Inline" })
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control Inline InputHeightSmaller", placeholder = " Email Address " })
         @Html.ValidationMessageFor(m => m.Email)
     </div>
 
     <!--CLIENT PhoneNumber-->
-    <div>
-        @Html.LabelFor(m => m.PhoneNumber)
-        @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control", Placeholder = "Phone # ( Client )" })
+    <div class="form-group">
+        @Html.LabelFor(m => m.PhoneNumber, new { @class = "Inline" })
+        @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control Inline InputHeightSmaller", Placeholder = " Phone # "})
         @Html.ValidationMessageFor(m => m.PhoneNumber)
     </div>
 

@@ -1,16 +1,19 @@
-﻿using GitHome.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace GitHome.ViewModal
 {
     public class UnitFormViewModel
     {
-        public IEnumerable<Client> Clients { get; set; }
+        public IEnumerable<SelectListItem> Clients { get; set; }
 
-        [Required]
-        public string Client { get; set; }
+        [Display(Name = "Client")]
+        public int SelectedClientId { get; set; }
+
+        //[Required]
+        //public string Client { get; set; }
 
         // UNIT INFORMATION
         [Required]
@@ -54,6 +57,10 @@ namespace GitHome.ViewModal
 
         public bool CentralAirCondition { get; set; }
 
+        [Required]
+        public string Title { get; set; }
+
+        [Required]
         public string Description { get; set; }
 
         public DateTime GetDateTime()

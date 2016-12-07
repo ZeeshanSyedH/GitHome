@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace GitHome.Models
@@ -11,13 +12,10 @@ namespace GitHome.Models
     *      THEIR ADDRESS & SECURITY QUESTIONS TO RESET THEIR PASSWORD
     */
 
-    public class Agent : Person
+    public sealed class Agent : Person
     {
         [Key]
-        public int AgentID { get; set; }
-
-        [Required]
-        public int securityQuestionID { get; set; }
+        public int AgentId { get; set; }
 
         [Required]
         public DateTime joinedOn { get; set; }
@@ -28,20 +26,20 @@ namespace GitHome.Models
         [Required]
         public int housesSold { get; set; }
 
+        public List<Client> Clients { get; set; }
 
-        public Agent(int agentId, int securityQId, DateTime joinedOn, bool isActive, int housesSold, string firstName, string lastName, string email, int phoneNumber)
+        public Agent()
         {
-            // AGENT SPECIFIC ATTRIBUTES
-            this.AgentID = agentId;
-            this.securityQuestionID = securityQId;
-            this.joinedOn = joinedOn;
-            this.isActive = isActive;
-            this.housesSold = housesSold;
-            // PERSON ATTIBUTES
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.Email = email;
-            this.PhoneNumber = phoneNumber;
+
         }
+
+        public Agent(string FirstName, string LastName, string email, string phoneNumber) : base(FirstName, LastName, email, phoneNumber)
+        {
+            this.joinedOn = DateTime.Now;
+            this.isActive = true;
+            this.housesSold = 0;
+        }
+
+
     }
 }

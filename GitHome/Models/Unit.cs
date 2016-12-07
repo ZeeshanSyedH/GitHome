@@ -15,22 +15,30 @@ namespace GitHome.Models
     public sealed class Unit
     {
         [Key]
-        public int unitID { get; set; }
+        public int ID { get; set; }
+
+        public Agent Agent { get; set; }
 
         [Required]
-        public String AgentID { get; set; }
+        public int AgentId { get; set; }
+
+        public UnitProperties UnitDetail { get; set; }
 
         [Required]
-        public int clientID { get; set; }
+        public int UnitDetailID { get; set; }
 
         [Required]
-        public UnitDetails UnitDetailID { get; set; }
+        public DateTime availableFrom { get; set; }
 
-        [Required]
-        public DateTime AvailableFrom { get; set; }
+        public Unit()
+        {
+        }
+
+        public Unit(int refAgent, int refUnitDetail, DateTime availableFrom)
+        {
+            this.AgentId = refAgent;
+            this.UnitDetailID = refUnitDetail;
+            this.availableFrom = availableFrom;
+        }
     }
-
-
-
-
 }

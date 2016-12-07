@@ -8,13 +8,13 @@ namespace GitHome.Models
 
         // MY OBJECTS --> UNITS,UNITDETAILS, CLIENTS, AGENTS 
         public DbSet<Unit> Units { get; set; }
-        public DbSet<UnitDetails> UnitDetails { get; set; }
+        public DbSet<UnitProperties> Properties { get; set; }
         public DbSet<Client> Clients { get; set; }
 
         public DbSet<Agent> Agents { get; set; }
 
         // CHECK IF ITS NECESSARY TO PUT THIS HERE
-        public DbSet<Address> UnitAddresses { get; set; }
+        public DbSet<Address> Addresses { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

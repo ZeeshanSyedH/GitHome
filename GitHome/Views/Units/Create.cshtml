@@ -8,12 +8,14 @@
 @using (Html.BeginForm("Create", "Units"))
 {
     @Html.AntiForgeryToken()
-    <!-- CLIENT WHO'S HOUSE WILL BE SOLD -->
+    <!-- CLIENT WHO'S HOUSE WILL     BE SOLD -->
     <div class="form-group">
-        @Html.LabelFor(m => m.Client, new { @class = "Inline" })
-        @Html.DropDownListFor(m => m.Client, new SelectList(Model.Clients, "clientID", "FirstName"), "", new { @class = "form-control ddl InputHeightSmaller Inline", autofocus = "autofocus" })
-        @Html.ValidationMessageFor(m => m.Client)
+        @Html.LabelFor(m => m.SelectedClientId, new { @class = "Inline" })
+        @Html.DropDownListFor(m => m.SelectedClientId, new SelectList(Model.Clients, "clientID", "FirstName"), "", new { @class = "form-control ddl InputHeightSmaller Inline", autofocus = "autofocus" })
+        @Html.ValidationMessageFor(m => m.SelectedClientId)
     </div>
+
+
 
     <!-- COST OF THE HOUSE -->
     <div class="form-group">

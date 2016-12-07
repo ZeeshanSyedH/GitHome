@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace GitHome.Models
 {
@@ -27,5 +28,17 @@ namespace GitHome.Models
         [Required]
         [StringLength(6)]
         public string zipCode { get; set; }
+
+        public Address()
+        {
+
+        }
+        public Address(string civicNumber, string street, string city, string zipCode)
+        {
+            this.civicNumber = Convert.ToInt32(civicNumber);
+            this.street = street;
+            this.city = city;
+            this.zipCode = zipCode;
+        }
     }
 }

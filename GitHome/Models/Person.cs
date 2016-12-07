@@ -12,10 +12,25 @@ namespace GitHome.Models
         [StringLength(30)]
         public string LastName { get; set; }
 
-        [StringLength(80)]
+        [EmailAddress]
         public string Email { get; set; }
 
         [Required]
-        public int PhoneNumber { get; set; }
+        [Phone]
+        public string PhoneNumber { get; set; }
+
+        public Person()
+        {
+
+        }
+
+        public Person(string FirstName, string LastName, string email, string phoneNumber)
+        {
+            // INHEITED ATTIBUTES
+            this.FirstName = FirstName;
+            this.LastName = LastName;
+            this.Email = email;
+            this.PhoneNumber = phoneNumber;
+        }
     }
 }
