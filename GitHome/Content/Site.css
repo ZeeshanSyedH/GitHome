@@ -50,7 +50,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .form-control {
     font-size: 14px;
     padding: 20px 15px;
-    ms-border-radius: 9px;
     border-radius: 9px;
 }
 
@@ -114,6 +113,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: blue;
 }
 
+/* PAGE SPECIFIC OVERRIDES */
 .Inline {
     display: inline-block;
     margin-right: 7px;
@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .InputHeightSmaller {
     max-height: 25px;
 }
- 
+
 span.field-validation-error {
     color: red;
     font-weight: bold;
@@ -146,12 +146,12 @@ span.field-validation-error {
 
 .myJumbotron {
     min-height: 100vh;
+    min-width: 98vw;
     align-content: center;
     padding-top: 20vh;
     background-image: url("http://www.hotel-r.net/im/hotel/it/dream-home-3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
     overflow: hidden;
     position: absolute;
     top: 0;
@@ -160,10 +160,56 @@ span.field-validation-error {
     color: blue;
 }
 
+.fadedBox {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-left: 30vw;
+    min-height: 100vh;
+    min-width: 100vw;
+    color: snow;
+    position: absolute;
+    top: 3vw;
+    padding-top: 20vw;
+}
+
 .heroText {
     padding-left: 20vw;
 }
 
 .rowDelayed {
     margin-top: 101vh;
+}
+
+/* PAGE SPECIFIC OVERRIDES */
+
+.units > li {
+    position: relative;
+    margin-bottom: 7vh;
+    background-color: cornsilk;
+    width: 30vw;
+}
+
+
+    .units > li img {
+        vertical-align: middle;
+        width: 29vh;
+        border-radius: 50%;
+    }
+
+.units .details {
+    top: 0vh;
+    left: 32vh;
+    position: absolute;
+}
+
+.units > li {
+    list-style: none;
+    display: inline-block;
+}
+
+
+/* PAGE SPECIFIC OVERRIDES */
+@media (min-width: 992px) {
+    .col-md-2 {
+        width: auto;
+    }
 }
