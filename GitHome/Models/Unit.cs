@@ -34,10 +34,10 @@ namespace GitHome.Models
         {
         }
 
-        public Unit(int refAgent, int refUnitDetail, DateTime availableFrom)
+        public Unit(int refAgent, UnitProperties UnitDetail, DateTime availableFrom)
         {
             this.AgentId = refAgent;
-            this.UnitDetailID = refUnitDetail;
+            this.UnitDetail = UnitDetail;
             this.availableFrom = availableFrom;
         }
     }

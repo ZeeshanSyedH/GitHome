@@ -8,6 +8,7 @@ namespace GitHome.Models
 
         // MY OBJECTS --> UNITS,UNITDETAILS, CLIENTS, AGENTS 
         public DbSet<Unit> Units { get; set; }
+
         public DbSet<UnitProperties> Properties { get; set; }
         public DbSet<Client> Clients { get; set; }
 
@@ -25,6 +26,17 @@ namespace GitHome.Models
         {
             return new ApplicationDbContext();
         }
+
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+        //    modelBuilder
+        //        .Entity<Unit>()
+        //        .HasRequired(z => z.UnitDetail)
+        //        .WithRequiredPrincipal()
+        //        .WillCascadeOnDelete(false);
+
+        //    base.OnModelCreating(modelBuilder);
+        //}
     }
 
 }

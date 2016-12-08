@@ -1,6 +1,7 @@
 ﻿using GitHome.Models;
 using GitHome.ViewModal;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -21,12 +22,6 @@ namespace GitHome.Controllers
             {
                 Clients = GetClientList()
             };
-            //viewModel.Clients = new List<SelectListItem>()
-            //{
-            //    new SelectListItem { Value = "1", Text = "Test 1" },
-            //    new SelectListItem { Value = "2", Text = "Test 2" },
-            //    new SelectListItem { Value = "3", Text = "Test 3" }
-            //};
 
             return View(viewModel);
         }
@@ -48,10 +43,8 @@ namespace GitHome.Controllers
                                              viewModel.City,
                                              viewModel.ZipCode);
 
-            _context.Addresses.Add(newAddress);
-            _context.SaveChanges();
 
-            UnitProperties newUnitProperties = new UnitProperties(newAddress.addressID,
+            UnitProperties newUnitProperties = new UnitProperties(newAddress,
                                                                   true,
                                                                   viewModel.YearBuilt,
                                                                   viewModel.Price,
@@ -63,18 +56,15 @@ namespace GitHome.Controllers
                                                                   viewModel.Garages,
                                                                   viewModel.CentralAirCondition);
 
-            _context.Properties.Add(newUnitProperties);
-            _context.SaveChanges();
-
 
             Unit newProperty = new Unit(1,
-                newUnitProperties.unitDetailID,
+                newUnitProperties,
                 viewModel.GetDateTime());
 
             _context.Units.Add(newProperty);
             _context.SaveChanges();
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("List", "Units");
 
         }
 
@@ -89,5 +79,18 @@ namespace GitHome.Controllers
                     })
                     .ToList();
         }
+
+
+        [Authorize]
+        public ActionResult List()
+        {
+            var AgentProperties = _context.Units
+                .Include(x => x.UnitDetail)
+                //.Where(g => g.AgentId == User.Identity.getuserId())
+                .ToList();
+
+            return View(AgentProperties);
+        }
+
     }
 }

@@ -45,12 +45,12 @@ namespace GitHome.Models
 
         }
 
-        public UnitProperties(int addressId, bool forSale, string yearBuilt,
+        public UnitProperties(Address newAddress, bool forSale, string yearBuilt,
                               string askingPrice, string title, string description,
                               string numRooms, string numBedrooms, string numBathrooms,
                               string numGarageDoors, bool centralAirConditioning)
         {
-            this.AddressID = addressId;
+            this.Address = newAddress;
             this.forSale = forSale;
             this.yearBuilt = Convert.ToInt32(yearBuilt);
             this.askingPrice = Convert.ToInt32(askingPrice);

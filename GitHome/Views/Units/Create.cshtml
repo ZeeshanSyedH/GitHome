@@ -11,7 +11,7 @@
     <!-- CLIENT WHO'S HOUSE WILL     BE SOLD -->
     <div class="form-group">
         @Html.LabelFor(m => m.SelectedClientId, new { @class = "Inline" })
-        @Html.DropDownListFor(m => m.SelectedClientId, new SelectList(Model.Clients, "clientID", "FirstName"), "", new { @class = "form-control ddl InputHeightSmaller Inline", autofocus = "autofocus" })
+        @Html.DropDownListFor(m => m.SelectedClientId, new SelectList(Model.Clients, "value", "text"), "", new { @class = "form-control ddl InputHeightSmaller Inline", autofocus = "autofocus" })
         @Html.ValidationMessageFor(m => m.SelectedClientId)
     </div>
 
@@ -20,14 +20,14 @@
     <!-- COST OF THE HOUSE -->
     <div class="form-group">
         @Html.LabelFor(m => m.Price, new { @class = "Inline" })
-        @Html.TextBoxFor(m => m.Price, new { @class = "form-control Inline InputHeightSmaller", placeholder=" eg. 826 000 " })
+        @Html.TextBoxFor(m => m.Price, new { @class = "form-control Inline InputHeightSmaller", placeholder=" ie. 826 000 " })
         @Html.ValidationMessageFor(m => m.Price)
     </div>
 
     <!-- DATE AT WHICH IT WILL BE UNOCCUPIED -->
     <div class="form-group">
         @Html.LabelFor(m => m.Date, "Date of Availibility", new { @class = "Inline" })
-        @Html.TextBoxFor(m => m.Date, new { @class = "form-control Inline InputHeightSmaller", placeholder= " DD MM YYYY" })
+        @Html.TextBoxFor(m => m.Date, new { @class = "form-control Inline InputHeightSmaller", placeholder= "ie. 6 Jan 2017" })
         @Html.ValidationMessageFor(m => m.Date)
     </div>
 
@@ -41,25 +41,25 @@
     <!-- ADDRESS CIVIC # -->
     <div class="form-group">
         @Html.LabelFor(m => m.Civic, "Address", new { @class = "Inline" })
-        @Html.TextBoxFor(m => m.Civic, new { @class = "form-control InputHeightSmaller Inline", Placeholder="Civic# ( Eg. 7263 )" })
+        @Html.TextBoxFor(m => m.Civic, new { @class = "form-control InputHeightSmaller Inline", Placeholder="Civic# ( ie. 7263 )" })
         @Html.ValidationMessageFor(m => m.Civic)
     </div>
 
     <!-- ADDRESS STREET  -->
     <div class="form-group Inline">
-        @Html.TextBoxFor(m => m.Street, new { @class = "form-control InputHeightSmaller", Placeholder = "Street ( Eg. Awesome Av )" })
+        @Html.TextBoxFor(m => m.Street, new { @class = "form-control InputHeightSmaller", Placeholder = "Street ( ie. Awesome Av )" })
         @Html.ValidationMessageFor(m => m.Street)
     </div>
 
     <!-- ADDRESS CITY -->
     <div class="form-group Inline">
-        @Html.TextBoxFor(m => m.City, new { @class = "form-control InputHeightSmaller", Placeholder = "City ( Eg. Westmount )" })
+        @Html.TextBoxFor(m => m.City, new { @class = "form-control InputHeightSmaller", Placeholder = "City ( ie. Westmount )" })
         @Html.ValidationMessageFor(m => m.City)
     </div>
 
     <!-- ADDRESS ZIP CODE -->
     <div class="form-group Inline">
-        @Html.TextBoxFor(m => m.ZipCode, new { @class = "form-control InputHeightSmaller", Placeholder = "Zip Code ( Eg. J492L9 )" })
+        @Html.TextBoxFor(m => m.ZipCode, new { @class = "form-control InputHeightSmaller", Placeholder = "Zip Code ( ie. J492L9 )" })
         @Html.ValidationMessageFor(m => m.ZipCode)
     </div>
 
@@ -67,28 +67,28 @@
     <!-- TOTAL ROOMS -->
     <div class="form-group Inline SmallTB">
         @Html.LabelFor(m => m.Rooms)
-        @Html.TextBoxFor(m => m.Rooms, new { @class = "form-control InputHeightSmaller", Placeholder = " Eg. 4 " })
+        @Html.TextBoxFor(m => m.Rooms, new { @class = "form-control InputHeightSmaller", Placeholder = " ie. 4 " })
         @Html.ValidationMessageFor(m => m.Rooms)
     </div>
 
     <!-- BEDROOMS -->
     <div class="form-group Inline SmallTB">
         @Html.LabelFor(m => m.Bedrooms)
-        @Html.TextBoxFor(m => m.Bedrooms, new { @class = "form-control InputHeightSmaller", Placeholder = " Eg. 3 " })
+        @Html.TextBoxFor(m => m.Bedrooms, new { @class = "form-control InputHeightSmaller", Placeholder = " ie. 3 " })
         @Html.ValidationMessageFor(m => m.Bedrooms)
     </div>
 
     <!-- BATHROOMS -->
     <div class="form-group Inline SmallTB">
         @Html.LabelFor(m => m.Bathrooms)
-        @Html.TextBoxFor(m => m.Bathrooms, new { @class = "form-control InputHeightSmaller", Placeholder = " Eg. 2 " })
+        @Html.TextBoxFor(m => m.Bathrooms, new { @class = "form-control InputHeightSmaller", Placeholder = " ie. 2 " })
         @Html.ValidationMessageFor(m => m.Bathrooms)
     </div>
 
     <!-- GARAGES -->
     <div class="form-group Inline SmallTB">
         @Html.LabelFor(m => m.Garages)
-        @Html.TextBoxFor(m => m.Garages, new { @class = "form-control InputHeightSmaller", Placeholder = " Eg. 1 " })
+        @Html.TextBoxFor(m => m.Garages, new { @class = "form-control InputHeightSmaller", Placeholder = " ie. 1 " })
         @Html.ValidationMessageFor(m => m.Garages)
     </div>
 

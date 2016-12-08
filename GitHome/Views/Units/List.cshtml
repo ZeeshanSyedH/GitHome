@@ -1,0 +1,84 @@
+﻿@model IEnumerable<GitHome.Models.Unit>
+
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitDetail.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitDetail.askingPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitDetail.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitDetail.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitDetail.yearBuilt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitDetail.numRooms)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitDetail.numBedrooms)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitDetail.numBathrooms)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitDetail.numGarageDoors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitDetail.centralAirConditioning)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var Unit in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Unit.UnitDetail.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Unit.UnitDetail.askingPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Unit.UnitDetail.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Unit.UnitDetail.description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Unit.UnitDetail.yearBuilt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Unit.UnitDetail.numRooms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Unit.UnitDetail.numBedrooms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Unit.UnitDetail.numBathrooms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Unit.UnitDetail.numGarageDoors)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Unit.UnitDetail.centralAirConditioning)
+            </td>
+        </tr>
+    }
+
+</table>

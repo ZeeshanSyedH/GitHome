@@ -17,8 +17,8 @@
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#">Properties I'm Selling</a></li>
-                <li><a href="#">Clients I'm Serving</a></li>
+                <li>@Html.ActionLink("Properties I'm Selling", "List", "Units", routeValues:null, htmlAttributes: new { title = "Manage"})</li>
+                <li>@Html.ActionLink("Clients I'm Serving", "Clients", "Agent")</li>
                 <li role="separator" class="divider"></li>
                 <li>@Html.ActionLink("Account Settings", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })</li>
                 <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
